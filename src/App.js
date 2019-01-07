@@ -19,16 +19,36 @@ const particlesOptions = {
 }
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      input : '',
+    }
+  }
+
+  onInputChange = (event) => {
+    console.log(event.target.value);
+  }
+
+  onButtonSubmit = (event) => {
+    console.log('click');
+  }
+
   render() {
     return (
       <div className="App">
         <Particles className='particles'
           params={particlesOptions}
         />
-        <Navigation />
-        <Logo />
+        <div className='flex justify-between'>
+          <Logo />
+          <Navigation />
+        </div>
         <Rank/>
-        <ImageLinkForm />
+        <ImageLinkForm 
+          onInputChange = {this.onInputChange}
+          onButtonSubmit = {this.onButtonSubmit}
+        />
         {/* 
         <FaceRecognition /> */}
       </div>
