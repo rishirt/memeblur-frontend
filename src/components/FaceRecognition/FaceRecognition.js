@@ -1,8 +1,14 @@
 import React from 'react';
 
-const FaceRecognition = ({ onInputChange, onButtonSubmit }) => {
+const FaceRecognition = ({ imageUrl }) => {
   return (
-    <div>
+    <div className ='center ma'>
+      <div className = 'absolute mt2'>
+        <img src = {imageUrl}
+         alt = 'faces recognized'
+         width = '500px'
+         height = 'auto' />
+      </div>
     </div>
   );
 }
