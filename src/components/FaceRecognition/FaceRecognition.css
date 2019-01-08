@@ -1,0 +1,10 @@
+.bounding-box{
+  position: absolute;
+  box-shadow: 0 0 0 3px #149df2 inset;
+  background-color:grey;
+  filter: blur(0.35rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
