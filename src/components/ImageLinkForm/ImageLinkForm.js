@@ -5,7 +5,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
   return (
     <div>
       <p className='f3'>
-        {'The Magic Brain will detect faces in your meme material and blur it. Give it a try.'}
+        {'The MemeBlur will detect faces in your meme material and blur it. Give it a try.'}
       </p>
       <div className='center'>
         <div className='form center pa4 br3 shadow-5'>

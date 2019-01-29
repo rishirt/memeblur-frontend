@@ -7,6 +7,7 @@ import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
 import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import Rank from './components/Rank/Rank'
 import './App.css';
 
 const app = new Clarifai.App({
@@ -16,10 +17,10 @@ const app = new Clarifai.App({
 const particlesOptions = {
   particles: {
     number: {
-      value: 100,
+      value: 300,
       density: {
         enable: true,
-        value_area: 800
+        value_area: 1000
       }
     }
   }
@@ -36,7 +37,7 @@ class App extends Component {
       isSignedIn: false,
     }
   }
-
+  
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
@@ -89,6 +90,7 @@ class App extends Component {
         {
           route === 'home' 
           ?<div>
+            <Rank />
             <ImageLinkForm 
             onInputChange={this.onInputChange}
             onButtonSubmit={this.onButtonSubmit}
